@@ -122,7 +122,7 @@ let
       haddockDir = lib.const p.haddockDir;
     };
   in hoogleLocal ({
-    packages = map docPackage (haskellLib.flatLibDepends component);
+    haskellPackages = map docPackage (haskellLib.flatLibDepends component);
 
     # Need to add hoogle to hsPkgs.
     # inherit (hsPkgs) hoogle;
